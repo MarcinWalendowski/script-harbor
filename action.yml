@@ -1,0 +1,20 @@
+name: Script Harbor
+description: Verify approved third-party script bytes without making model calls
+inputs:
+  state-dir:
+    description: Path to committed Script Harbor state, relative to the caller workspace
+    default: .script-harbor
+    required: false
+runs:
+  using: composite
+  steps:
+    - name: Build verifier
+      shell: bash
+      run: |
+        npm --prefix "$GITHUB_ACTION_PATH" ci --ignore-scripts --include=dev
+        npm --prefix "$GITHUB_ACTION_PATH" run build
+    - name: Verify source integrity and approvals
+      shell: bash
+      env:
+        HARBOR_STATE_DIR: ${{ inputs.state-dir }}
+      run: node "$GITHUB_ACTION_PATH/dist/cli.js" check --state-dir "$HARBOR_STATE_DIR"

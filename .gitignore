@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.script-harbor/
+artifacts/
+*.tgz
+.env
+.env.*
+!.env.example
