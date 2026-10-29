@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="430" viewBox="0 0 760 430" role="img" aria-labelledby="title description">
+  <title id="title">From remote scripts to reviewed, self-hosted bytes</title>
+  <desc id="description">Discover and hash scripts, get an LLM review and report, obtain human approval, then self-host eligible scripts. Reuse reviews when bytes and review settings stay the same.</desc>
+  <defs>
+    <linearGradient id="canvas" x2="1" y2="1">
+      <stop stop-color="#101e31"/>
+      <stop offset="1" stop-color="#0a1120"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 1 1 L 8 5 L 1 9" fill="none" stroke="#7d9bb9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="760" height="430" rx="24" fill="url(#canvas)"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <text x="32" y="38" fill="#94adc7" font-size="14" font-weight="700" letter-spacing="2">REMOTE SCRIPT → YOUR CONTROL</text>
+
+    <g fill="none" stroke="#7d9bb9" stroke-width="2" marker-end="url(#arrow)">
+      <path d="M 352 139 H 399"/>
+      <path d="M 568 205 V 238"/>
+      <path d="M 408 304 H 361"/>
+    </g>
+
+    <rect x="32" y="72" width="320" height="132" rx="16" fill="#15273d" stroke="#2b4360"/>
+    <circle cx="63" cy="105" r="15" fill="#264e73"/>
+    <text x="63" y="110" text-anchor="middle" fill="#c7e2ff" font-size="14" font-weight="700">1</text>
+    <text x="55" y="151" fill="#f4f8ff" font-size="26" font-weight="650">Discover + hash</text>
+    <text x="55" y="180" fill="#b1c7df" font-size="17">Save the exact script bytes</text>
+
+    <rect x="408" y="72" width="320" height="132" rx="16" fill="#15273d" stroke="#2b4360"/>
+    <circle cx="439" cy="105" r="15" fill="#264e73"/>
+    <text x="439" y="110" text-anchor="middle" fill="#c7e2ff" font-size="14" font-weight="700">2</text>
+    <text x="431" y="151" fill="#f4f8ff" font-size="26" font-weight="650">Review + report</text>
+    <text x="431" y="180" fill="#b1c7df" font-size="17">Claude · Codex · OpenRouter</text>
+
+    <rect x="408" y="240" width="320" height="132" rx="16" fill="#2c2820" stroke="#66543a"/>
+    <circle cx="439" cy="273" r="15" fill="#70572b"/>
+    <text x="439" y="278" text-anchor="middle" fill="#ffe1a4" font-size="14" font-weight="700">3</text>
+    <text x="431" y="319" fill="#ffe1a4" font-size="26" font-weight="650">You approve</text>
+    <text x="431" y="348" fill="#d8c6a7" font-size="17">Choose what may be rehosted</text>
+
+    <rect x="32" y="240" width="320" height="132" rx="16" fill="#10302e" stroke="#25625a"/>
+    <circle cx="63" cy="273" r="15" fill="#236358"/>
+    <text x="63" y="278" text-anchor="middle" fill="#a0f0d5" font-size="14" font-weight="700">4</text>
+    <text x="55" y="319" fill="#a0f0d5" font-size="24" font-weight="650">Self-host eligible scripts</text>
+    <text x="55" y="348" fill="#add9cc" font-size="17">Pinned bytes · your domain / CDN</text>
+
+    <text x="380" y="408" text-anchor="middle" fill="#a5bcd4" font-size="17">Same bytes + review settings → reuse the review</text>
+  </g>
+</svg>
