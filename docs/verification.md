@@ -17,6 +17,8 @@ npm run test:e2e
 
 The unit/integration suite exercises parsing, source hashing and tamper rejection, network boundaries, provider response validation, approval binding, and rewriting. The runtime E2E uses local servers and a browser to exercise the capture-to-protect path. Neither suite certifies arbitrary third-party source.
 
+Linux CI uses Ubuntu 22.04 with Chromium's sandbox enabled. The first `ubuntu-latest` run failed with `No usable sandbox` because its AppArmor policy blocked the downloaded browser's user namespace. Runtime capture deliberately fails in that situation; it does not retry with the sandbox disabled. For newer Ubuntu hosts, see [Chromium's sandbox setup guidance](https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md).
+
 ## Live vendor capture
 
 Run `npx tsx scripts/live-vendors.ts` to statically fetch the pinned public Sentry, Google Tag Manager, and Microsoft Clarity examples. The script records capture time, requested and final URL, HTTP status, content type, byte count, and SHA-256 under ignored `artifacts/live-vendors/`. It does not execute vendor code, call an LLM, approve sources, or assert that a vendor's script is safe. URLs or vendor responses can change; inspect each run's metadata and failures.
